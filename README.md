@@ -68,91 +68,48 @@ https://ee-carlosmendez.projects.earthengine.app/view/first-exercise-sei
 
 Version `1.0`
 
-```JavaScript
+```HTML
 https://github.com/CarlosMendez1997Col/Monitoring-Agrometeorological-Resources/releases
 ```
   
-## External packages and repositories of GEE
+# Packages and libraries used in exercise 1 and 2
 
-```JavaScript
-require("users/aazuspan/snazzy:styles");
-require('users/gena/packages:style');
-require('users/gena/packages:text');
-require('users/gena/packages:utils');
+```Python
+from arcgis.map.renderers import (ClassBreaksRenderer, ClassBreakInfo, SizeInfoVisualVariable)
+from arcgis.map.symbols import SimpleLineSymbolEsriSLS, SimpleFillSymbolEsriSFS
+import numpy as np
+import pandas as pd
+import math
+import os
+import time
+
+from datetime import datetime as dt
+from IPython.display import Image, HTML
+from copy import deepcopy
+
+from arcgis.gis import GIS
+from arcgis.features import FeatureLayer, FeatureLayerCollection
+from arcgis.geometry import SpatialReference
+
+import arcpy
+from arcpy.sa import*
+from arcpy.ia import*
+from arcpy import env
+from arcgis.raster.functions import *
+
+# connect to GIS
+from arcgis.gis import GIS
+from arcgis.geometry import SpatialReference
 ```
 
-## External Basemaps
-
 ```JavaScript
-var MultiBrand = "https://snazzymaps.com/style/20053/multi-brand-network"
-var MidNight = "https://snazzymaps.com/style/2/midnight-commander"
-var GeoMap = "https://snazzymaps.com/style/48477/geomap"
-var AImap = "https://snazzymaps.com/style/283414/ai-map"
-var AccessCall = "https://snazzymaps.com/style/10448/accesscall"
-var MutedBlue = "https://snazzymaps.com/style/83/muted-blue"
-var Outrun = "https://snazzymaps.com/style/122898/outrun"
-var Cobalt = "https://snazzymaps.com/style/30/cobalt"
-```
-
-## External Images and ImageCollections
-
-```JavaScript
+ee.FeatureCollection("projects/ee-carlosmendez1997/assets/AOI_ext")
 ee.ImageCollection("users/gena/global-hand/hand-100")
-ee.Image("JAXA/ALOS/AW3D30/V2_2")
+ee.FeatureCollection("projects/ee-carlosmendez1997/assets/WEAP_Catchment");
+ee.FeatureCollection("projects/ee-carlosmendez1997/assets/AOI_ejercicio2")
+ee.ImageCollection("JRC/GSW1_4/MonthlyHistory")
 ```
 
-## Main ImageCollections and Datasets
-
-```JavaScript
-
-ee.FeatureCollection('FAO/GAUL_SIMPLIFIED_500m/2015/level1');
-
-// A1.Precipitation and Rainfall
-ee.ImageCollection('UCSB-CHG/CHIRPS/DAILY').select(['precipitation'])
-                 
-// B2. Wind Speed
-ee.ImageCollection('NASA/FLDAS/NOAH01/C/GL/M/V001').select(['Wind_f_tavg'])
-
-// C3. Surface Air Temperature (SAT)
-ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').select(['temperature_2m'])
-                            
-// D4. Runoff
-
-// Surface Runoff
-ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').select(['surface_runoff_sum'])
-// Groundwater Runoff
-ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').select(['sub_surface_runoff_sum'])
-
-// E5. Evaporation and Evapotranspiration
-ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').select(['total_evaporation_sum'])
-
-// F6. Solar Radiation
-ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').select(['surface_net_solar_radiation_sum'])
-
-// G7. Soil Moisture (In construction)
-
-// H8. Relative Humidity (In construction)
-
-// I9. Soil Temperature (In construction)
-
-// J10 Soil Water Storage (SWS) (0-7cm), (7-28cm), (28-100cm), (100-289cm)
-
-ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').select(['volumetric_soil_water_layer_1'])
-ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').select(['volumetric_soil_water_layer_2'])
-ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').select(['volumetric_soil_water_layer_3'])
-ee.ImageCollection('ECMWF/ERA5_LAND/DAILY_AGGR').select(['volumetric_soil_water_layer_4'])
-
-// K11. Agrometeorological Index (In construction)
-```
-
-
-## Credits and repository of data
-
-The original Images, ImageCollection and FeatureCollections used in this project, are available at:
-
-- [CHIRPS Daily](https://developers.google.com/earth-engine/datasets/catalog/UCSB-CHG_CHIRPS_DAILY) Climate Hazards Center InfraRed Precipitation With Station Data (Version 2.0 Final) 
-- [FLDAS:](https://developers.google.com/earth-engine/datasets/catalog/NASA_FLDAS_NOAH01_C_GL_M_V001?hl=es-419#description)Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System
-- [ERA5](https://developers.google.com/earth-engine/datasets/catalog/ECMWF_ERA5_LAND_DAILY_AGGR) Land Daily Aggregated - ECMWF Climate Reanalysis
 
 ## Conflict of Interest.
 
