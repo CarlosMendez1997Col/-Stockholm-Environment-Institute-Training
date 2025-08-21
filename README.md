@@ -39,7 +39,6 @@ Exercises One and Two proposed by the Stockholm Environment Institute (SEI) for 
 
 The application developed is available at:
 ```html
-<!-- WebMap Short Url-->
 https://udistritalfjc.maps.arcgis.com/home/item.html?id=429c3f9e12dc4dc2a2c88b224acde995
 ```
 ### Exercise One (Second Solution)
@@ -51,7 +50,6 @@ https://udistritalfjc.maps.arcgis.com/home/item.html?id=429c3f9e12dc4dc2a2c88b22
 
 The application developed is available at:
 ```html
-<!-- WebMap Short Url-->
 https://ee-carlosmendez.projects.earthengine.app/view/first-exercise-sei
 ```
 
@@ -69,7 +67,7 @@ https://ee-carlosmendez.projects.earthengine.app/view/first-exercise-sei
 Version `1.0`
 
 ```HTML
-https://github.com/CarlosMendez1997Col/Monitoring-Agrometeorological-Resources/releases
+In construction
 ```
   
 # Packages and libraries used in exercise 1 and 2
