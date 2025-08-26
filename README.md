@@ -15,7 +15,7 @@ gh repo clone CarlosMendez1997Col/-Stockholm-Environment-Institute-Training
 
 ## Description
 
-Exercises One and Two proposed by the Stockholm Environment Institute (SEI) for the position of Research Associate-Water Program. Repository builded with the following tools:
+Exercises One and Two proposed by the Stockholm Environment Institute (SEI) for the position of Research Associate-Water Program. Repository built with the following tools:
 
 * `Python`
 * `Javascript`
